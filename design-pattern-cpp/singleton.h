@@ -11,4 +11,20 @@ class Singleton {
     }
 
     ~Singleton(){ cout << "Initiate destructor" << endl; }
+
+    public:
+        static Singleton *getInstance(){
+            if(!instance){
+                instance = new Singleton;
+            }
+            return instance;
+        }
+
+        void setData(int data){
+            this->data = data;
+        }
+        
+        int getData(){
+            return data;
+        }
 };
