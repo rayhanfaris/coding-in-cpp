@@ -13,6 +13,9 @@ class Singleton {
     ~Singleton(){ cout << "Initiate destructor" << endl; }
 
     public:
+        Singleton(const Singleton&) = delete;
+        Singleton operator&=(const Singleton&) = delete;
+        
         static Singleton *getInstance(){
             if(!instance){
                 instance = new Singleton;
