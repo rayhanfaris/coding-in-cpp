@@ -3,6 +3,23 @@
 #include <sstream>
 using namespace std;
 
+string toString(vector<int> vect){
+    stringstream ss;
+    char space = ' ';
+
+    for (int i = 0; i != vect.size(); i++){
+        ss << vect[i] << space;
+    }
+
+    // ALT
+
+    // for(auto i=integer.begin(); i!=integer.end(); ++i){
+    //    cout << *i << "\n";
+    // } 
+
+    return ss.str();
+}
+
 vector<int> integerParse(string a){
     stringstream ss(a);
     int temp;
@@ -12,21 +29,15 @@ vector<int> integerParse(string a){
         vect.push_back(temp);
         ss >> ch;
     }
+
     return vect;
 }
 
 int main(){
-    string a;
-    cin >> a;
-    vector<int> integer = integerParse(a);
-    
-    // for(auto i=integer.begin(); i!=integer.end(); ++i){
-    //     cout << *i << "\n";
-    // }
-    for (int i = 0; i != integer.size(); i++){
-        cout << integer[i] << "\n";
-    }
+    string a = "10,43,-12,50,60";
+    vector<int> integers = integerParse(a);
 
-    cout << endl;
+    cout << toString(integers) << endl;
+
     return 0;
 }
