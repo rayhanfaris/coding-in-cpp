@@ -17,6 +17,4 @@ One common use of this class is to parse comma-separated integers from a string 
 > 23,4,56
   
 #### Sample Output
-> 23  
-> 4  
-> 56
+> My numbers are 23 4 56 !
