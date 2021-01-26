@@ -6,10 +6,11 @@ using namespace std;
 string toString(vector<int> vect){
     stringstream ss;
     char space = ' ';
-
+    ss << "My numbers are ";
     for (int i = 0; i != vect.size(); i++){
         ss << vect[i] << space;
     }
+    ss << '!';
 
     // ALT
 
